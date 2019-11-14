@@ -1,0 +1,83 @@
+.contents{
+  width: 100%;
+  &__header{
+    height:70px; 
+    background-color: #343a40;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 1450px;
+    &__frame{
+       padding-top: 20px;
+      &__main{
+        color: white;
+        font-size: 20px;
+        float: left;
+        padding-left: 80px;
+        font-family: 'Party LET',sans-serif;
+      }
+      &__main__side{
+        
+        &__links{
+          display: flex;
+          justify-content: flex-end;
+          &__list{
+            padding: 0 20px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  &__main{
+    height: 1200px;
+    background-position: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 70px 100px 0;
+    background-image: url(http://imgcc.naver.jp/kaze/mission/USER/20120515/77/757977/3/600x400x3c4d5c9ff1de1a94169f3d31.jpg);
+    &__center{
+      background-color: #e9ecef;;
+      width: 900px;
+      height: 250px;
+      margin: 0 auto;
+      border-radius: 30px;
+      padding-top: 30px;
+      &__header{
+        width: 200px;
+        padding-top: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 20px;
+      }
+      &__str{
+        margin-left: 20px;
+        padding-top: 20px;
+      } 
+      &__bottom{
+        background-color: blue;
+        color: white;
+        width: 220px;
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding: 20px 10px;
+        font-family: 'Party LET',sans-serif;
+      } 
+    }
+  }
+  
+  &__footer{
+    height: 70px;
+    background-color: #343a40;
+    &__font{
+      width: 100px;
+      background-color: orange;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 70px;
+      border-radius: 90px;
+      color: white;
+    }
+    }
+}
