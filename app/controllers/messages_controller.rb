@@ -12,14 +12,26 @@ class MessagesController < ApplicationController
     redirect_to root_path
   end
 
-  def destroy
-    message = Message.find(params[:id])
-    message.destroy
-  end
-
   def show
     @message = Message.find(params[:id])
   end
+
+  def edit
+    @message = Message.find(params[:id])
+  end
+
+  def update
+    message = Message.find(params[:id])
+    message.update(post_params)
+    redirect_to root_path
+  end
+
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy
+    redirect_to root_path
+  end
+
 
   private
   def message_params

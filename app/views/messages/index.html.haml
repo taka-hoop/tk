@@ -1,36 +1,52 @@
+-# .contents
+-#   = render "messages/message"
+
+-#   .contents__main
+-#     .contents__main__center
+-#       .contents__main__center__header
+-#         里親サイトへようこそ！
+-#       .contents__main__center__str
+-#         猫の保護サイト
+-#       .contents__main__center__bottom
+-#         = link_to new_message_path, class:"btn"do
+-#           猫を登録する
+-#     - @messages.each do |message| 
+-#       -# each doでmessageを上から順に１つずつ表示
+-#       .contents__main__title
+-#         = link_to message_path(message.id), class:"title__show"do
+-#           = message.title
+-#           = icon('fab', 'gem') #doでネストさせるとアイコンとか文字列をリンクのやつと別で表示させれるlink_toに入れ込むことも可能
+-#         .contents__main__title__new  
+-#           = message.content
+-#           = link_to "削除する", message_path(message.id), method: :delete, class:"bo"
+-#       - if message.image.present? #もしメッセージがあるなら以下の画像を表示しますよ
+-#         .contents__main__title__image
+-#           //%img{alt: "", src: "#{message.image}", size:'32*48'}
+-#           = image_tag message.image, size: "400x400"
+-#         .contents__main__title__btn
+-#           = link_to "この子を持って帰る", class:"botan" #link_toを使って投稿された内容にボタンをつける
+-#     = paginate(@messages)     
+
+
+
+-# -# 24行目createでparamsでDBに送られたメッッセージの中のカラムimageを取り出せという処理と投稿された画像のサイズ指定
+
+.header
+  .header__name
+    Cat Pro
+  - if user_signed_in?
+    .header__flame
+      メニュー
+    .header__flame  
+      = link_to destroy_user_session_path, method: :delete do
+        ログアウト
+  - else        
+    = link_to new_user_registration_path, class: "link"do
+      新規登録
+    = link_to new_user_session_path, class: "link"do
+      ログイン
+
 .contents
-  = render "messages/message"
-
   .contents__main
-    .contents__main__center
-      .contents__main__center__header
-        里親サイトへようこそ！
-      .contents__main__center__str
-        猫の保護サイト
-      .contents__main__center__bottom
-        = link_to new_message_path, class:"btn"do
-          猫を登録する
-    - @messages.each do |message| 
-      -# each doでmessageを上から順に１つずつ表示
-      .contents__main__title
-        = link_to message_path(message.id), class:"title__show"do
-          = message.title
-          = icon('fab', 'gem') #doでネストさせるとアイコンとか文字列をリンクのやつと別で表示させれるlink_toに入れ込むことも可能
-        .contents__main__title__new  
-          = message.content
-      - if message.image.present? #もしメッセージがあるなら以下の画像を表示しますよ
-        .contents__main__title__image
-          //%img{alt: "", src: "#{message.image}", size:'32*48'}
-          = image_tag message.image, size: "400x400"
-        .contents__main__title__btn
-          = link_to "この子を持って帰る", class:"botan" #link_toを使って投稿された内容にボタンをつける
-          = link_to "削除する", "/messages/:id", class:"bo"
-    = paginate(@messages)     
-    
-  .contents__footer
-    .contents__footer__font
-      conpany
-
-
-
--# 24行目createでparamsでDBに送られたメッッセージの中のカラムimageを取り出せという処理と投稿された画像のサイズ指定
+    .contents__main__pc
+  
