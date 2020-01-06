@@ -113,8 +113,22 @@
   margin: 30px 0;
   text-align: center;
   overflow:scroll;
+  &__main{
+    height: 100px;
+    background-color:silver;
+    line-height: 100px;
+  }
+  .btn{
+    text-decoration:none;
+  }
+  .btn:hover{
+    opacity: 0.7;
+  }
 }
 
 .footer {
-  
+  background-color:gray;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
 }

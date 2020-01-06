@@ -29,7 +29,7 @@
 
 
 
--# -# 24行目createでparamsでDBに送られたメッッセージの中のカラムimageを取り出せという処理と投稿された画像のサイズ指定
+-# -# -# 24行目createでparamsでDBに送られたメッッセージの中のカラムimageを取り出せという処理と投稿された画像のサイズ指定
 
 .header
   .header__name
@@ -48,5 +48,8 @@
 
 .contents
   .contents__main
-    .contents__main__pc
+    = link_to new_message_path, class:"btn"do
+      登録する
+.footer
+  test
   
