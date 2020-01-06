@@ -1,20 +1,6 @@
 .contents
+  = render "messages/message"
 
-  .contents__header
-    .contents__header__frame
-      .contents__header__frame__main
-        Cat protection
-      .contents__header__frame__main__side
-        %ul.contents__header__frame__main__side__links
-          %li.contents__header__frame__main__side__links__list
-            HOME
-          %li.contents__header__frame__main__side__links__list   
-            ABOUNT
-          %li.contents__header__frame__main__side__links__list 
-            MENU
-          %li.contents__header__frame__main__side__links__list  
-            EDIT
-  
   .contents__main
     .contents__main__center
       .contents__main__center__header
@@ -22,13 +8,29 @@
       .contents__main__center__str
         猫の保護サイト
       .contents__main__center__bottom
-        猫を登録する
-  
-  
+        = link_to new_message_path, class:"btn"do
+          猫を登録する
+    - @messages.each do |message| 
+      -# each doでmessageを上から順に１つずつ表示
+      .contents__main__title
+        = link_to message_path(message.id), class:"title__show"do
+          = message.title
+          = icon('fab', 'gem') #doでネストさせるとアイコンとか文字列をリンクのやつと別で表示させれるlink_toに入れ込むことも可能
+        .contents__main__title__new  
+          = message.content
+      - if message.image.present? #もしメッセージがあるなら以下の画像を表示しますよ
+        .contents__main__title__image
+          //%img{alt: "", src: "#{message.image}", size:'32*48'}
+          = image_tag message.image, size: "400x400"
+        .contents__main__title__btn
+          = link_to "この子を持って帰る", class:"botan" #link_toを使って投稿された内容にボタンをつける
+          = link_to "削除する", "/messages/:id", class:"bo"
+    = paginate(@messages)     
+    
   .contents__footer
     .contents__footer__font
-      練習用サイト
+      conpany
 
 
 
-  
+-# 24行目createでparamsでDBに送られたメッッセージの中のカラムimageを取り出せという処理と投稿された画像のサイズ指定
