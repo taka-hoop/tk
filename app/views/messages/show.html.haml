@@ -4,6 +4,6 @@
   .showtop__nav
     .showtop__links
       .showtop__link
-        = link_to "編集する"
+        = link_to "編集する", edit_message_path(@message.id), method:"get"
       .showtop__link
-        = link_to "削除する"
+        = link_to "削除する", message_path(@message.id), method:"delete"
