@@ -100,6 +100,11 @@
     color:white;
     line-height: 100px;
   }
+  .header__flame{
+    line-height: 100px;
+    text-decoration: none;
+    color:white;
+  }
   .link{
     line-height: 100px;
     text-decoration: none;
@@ -120,6 +125,7 @@
   }
   .btn{
     text-decoration:none;
+    color:white;
   }
   .btn:hover{
     opacity: 0.7;
@@ -131,4 +137,8 @@
   text-align: center;
   height: 50px;
   line-height: 50px;
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
