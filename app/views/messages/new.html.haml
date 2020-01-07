@@ -1,0 +1,8 @@
+.hheader 新規猫
+
+.content
+  = form_with model: @message, class: :form do |form|
+    = form.text_field :title, placeholder: :タイトル, class: :forms__title
+    = form.text_field :image, placeholder: :イメージ, class: :forms__image
+    = form.text_area :content, placeholder: :本文, class: :forms__text
+    = form.submit '投稿する', class: :forms__btn

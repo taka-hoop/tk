@@ -1,0 +1,22 @@
+-# .contents__header
+-#   .contents__header__frame
+-#     .contents__header__frame__main
+-#       Cat protection
+-#       .contents__header__frame__main__side
+-#       - if user_signed_in?
+-#         .contents__header__frame__main__side__links
+-#           .contents__header__frame__main__side__links__list 
+-#             = icon('fab', 'autoprefixer')
+-#           .contents__header__frame__main__side__links__list  
+-#             = icon('fab', 'bitbucket')
+-#           .contents__header__frame__main__side__links__list   
+-#             = link_to destroy_user_session_path, method: :delete do
+-#               .logout ログアウト
+            
+-#       - else        
+-#         = link_to new_user_registration_path, class: "link" do
+-#           新規登録
+-#           = icon('fab', 'apple') #link_toでネストしたところにicon入れてる
+-#         = link_to new_user_session_path, class: "link" do
+-#           ログイン
+-#           = icon('fab', 'amilia')
