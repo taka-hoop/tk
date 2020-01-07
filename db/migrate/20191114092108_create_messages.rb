@@ -4,8 +4,8 @@ class CreateMessages < ActiveRecord::Migration[5.2]
       t.text :title
       t.text :content
       t.text :image
-      t.integer :area
-      t.integer :type
+      t.integer :area_id
+      t.integer :type_id
       t.timestamps
     end
   end

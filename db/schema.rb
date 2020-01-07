@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2019_11_15_125148) do
     t.text "title"
     t.text "content"
     t.text "image"
-    t.integer "area"
-    t.integer "type"
+    t.integer "area_id"
+    t.integer "type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
