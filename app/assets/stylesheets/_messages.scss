@@ -117,19 +117,29 @@
   height: 700px;
   margin: 30px 0;
   text-align: center;
-  overflow:scroll;
+  overflow: scroll;
+  &__edit{
+    width: 100%;
+  }
   &__main{
     height: 100px;
     background-color:silver;
     line-height: 100px;
+    margin: 30px 0;
+    text-align: center;
+  
+    .btn{
+      text-decoration:none;
+      color:white;
+    }
+    .btn:hover{
+      opacity: 0.7;
+    }
   }
-  .btn{
-    text-decoration:none;
-    color:white;
-  }
-  .btn:hover{
-    opacity: 0.7;
-  }
+}
+
+.test{
+  display: inline-block;
 }
 
 .footer {
