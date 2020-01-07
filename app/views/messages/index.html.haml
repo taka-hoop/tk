@@ -46,16 +46,20 @@
     = link_to new_user_session_path, class: "link"do
       ログイン
 
+.contents__main
+  = link_to new_message_path, class:"btn"do
+    登録する
+
 .contents
-  .contents__main
-    = link_to new_message_path, class:"btn"do
-      登録する
   .contents__edit
     - @messages.each do |message|
-      .contents__edit__text
-        = message.title
-      .contents__edit__image
-        = image_tag "#{message.image}"  
+      .test
+        .contents__edit__text
+          = message.title
+        .contents__edit__show
+          = link_to "詳細をみる", message_path(message.id), class:"show"
+        .contents__edit__image
+          = image_tag message.image, size: "400x400" 
 = paginate(@messages) 
 
 
