@@ -6,6 +6,7 @@ class CreateMessages < ActiveRecord::Migration[5.2]
       t.text :image
       t.integer :area_id
       t.integer :type_id
+      t.integer :user_id
       t.timestamps
     end
   end

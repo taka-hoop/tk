@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_01_10_070504) do
     t.text "image"
     t.integer "area_id"
     t.integer "type_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
