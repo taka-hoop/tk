@@ -17,8 +17,8 @@
       .contents__edit__text
         = @message.content
       .contents__edit__text
-        = @message.area_id
+        = @message.area.name
       .contents__edit__text
-        = @message.type_id
+        = @message.type.name
       .contents__edit__image
         = image_tag @message.image, size: "400x400" 
