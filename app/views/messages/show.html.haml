@@ -7,3 +7,18 @@
         = link_to "編集する", edit_message_path(@message.id), method:"get"
       .showtop__link
         = link_to "削除する", message_path(@message.id), method:"delete"
+      .showtop__link  
+        = link_to "チャットをする", new_group_path ,class:"btnn"
+.contents
+  .contents__edit
+    .test
+      .contents__edit__text
+        = @message.title
+      .contents__edit__text
+        = @message.content
+      .contents__edit__text
+        = @message.area_id
+      .contents__edit__text
+        = @message.type_id
+      .contents__edit__image
+        = image_tag @message.image, size: "400x400" 
