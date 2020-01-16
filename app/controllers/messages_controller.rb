@@ -31,11 +31,7 @@ class MessagesController < ApplicationController
   end
 
   def move_to_index
-    if user_signed_in?
-    else
-      redirect_to messages_path
-      # redirect_to messages_path unless user_signed_in?
-    end
+    redirect_to action: :index unless user_signed_in?
   end
 
 
