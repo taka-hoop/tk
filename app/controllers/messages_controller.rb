@@ -31,7 +31,11 @@ class MessagesController < ApplicationController
   end
 
   def move_to_index
-    redirect_to messages_path unless user_signed_in?
+    if user_signed_in?
+    else
+      redirect_to messages_path
+      # redirect_to messages_path unless user_signed_in?
+    end
   end
 
 
