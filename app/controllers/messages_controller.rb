@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :new]
 
   def index
     @messages = Message.all.order("created_at DESC").page(params[:page]).per(20)
@@ -35,5 +35,5 @@ class MessagesController < ApplicationController
   end
 
 
-  
+
 end
